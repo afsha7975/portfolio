@@ -1,0 +1,61 @@
+body{
+font-family:'Inter',sans-serif;
+background:linear-gradient(135deg,#020617,#0f172a,#000);
+overflow-x:hidden;
+color:white;
+}
+
+.glow-btn{
+box-shadow:0 0 15px cyan;
+transition:0.3s;
+}
+.glow-btn:hover{
+box-shadow:0 0 35px cyan;
+transform:translateY(-4px);
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(0,255,255,0.2);
+border-radius:20px;
+transition:0.4s;
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(0,255,255,0.5);
+}
+
+.shape{
+position:absolute;
+border-radius:50%;
+opacity:0.2;
+}
+
+@keyframes float1{
+0%{transform:translateY(0)}
+50%{transform:translateY(-40px)}
+100%{transform:translateY(0)}
+}
+@keyframes float2{
+0%{transform:translateX(0)}
+50%{transform:translateX(40px)}
+100%{transform:translateX(0)}
+}
+
+.float1{animation:float1 6s infinite ease-in-out}
+.float2{animation:float2 8s infinite ease-in-out}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s;
+}
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.nav-link:hover{
+color:cyan;
+}
